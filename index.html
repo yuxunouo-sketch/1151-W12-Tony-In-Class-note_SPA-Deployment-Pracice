@@ -1,316 +1,963 @@
 
-<!-- saved from url=(0107)file:///C:/Users/%E9%BB%83%E6%98%B1%E5%8B%9B/Downloads/artifact-a2d41fcf-6233-4682-812e-9e31ac39ea24-0.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><svg xmlns="http://www.w3.org/2000/svg" width="840" height="1880" viewBox="0 0 840 1880" role="img" aria-labelledby="title description">
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
 
-  <title id="title">Business News Analysis — EMI Process</title>
-  <desc id="description">
-    A portrait workflow showing classroom materials progressing through
-    separation, investigation, recombination, insights, Markdown review,
-    and SVG visualization. An optional extension connects the knowledge
-    workflow to product requirements, MVP development, deployment,
-    and market feedback.
-  </desc>
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description"
+      content="Bilingual Business News Analysis and EMI knowledge-to-product workflow.">
+<title>BNA × EMI</title>
 
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#62798A"></path>
-    </marker>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7fafc;
+    --surface: #ffffff;
+    --text: #243b4a;
+    --muted: #536a78;
+    --border: #d5e1e8;
+    --accent: #27627b;
+    --blue: #eaf5fa;
+    --pink: #faedf3;
+    --green: #eef6e8;
+    --orange: #fff2e3;
+    --shadow: 0 12px 32px rgb(32 59 75 / 12%);
+  }
 
-    <marker id="feedbackArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#83927A"></path>
-    </marker>
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #111b23;
+    --surface: #1b2933;
+    --text: #e8f0f5;
+    --muted: #b7c9d4;
+    --border: #405564;
+    --accent: #a4d9ef;
+    --blue: #203b49;
+    --pink: #3c2c3a;
+    --green: #293d2e;
+    --orange: #423627;
+    --shadow: 0 12px 32px rgb(0 0 0 / 25%);
+  }
 
-    <style>
-      text {
-        font-family: Arial, Helvetica, sans-serif;
-        fill: #263C4A;
-      }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
 
-      .title {
-        font-size: 30px;
-        font-weight: 700;
-      }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
 
-      .subtitle {
-        font-size: 17px;
-        fill: #526875;
-      }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Noto Sans TC", sans-serif;
+    line-height: 1.7;
+  }
 
-      .section {
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 1.4px;
-        fill: #526875;
-      }
+  button, a { -webkit-tap-highlight-color: transparent; }
 
-      .heading {
-        font-size: 23px;
-        font-weight: 700;
-      }
+  button {
+    min-height: 44px;
+    padding: .55rem .85rem;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font: inherit;
+    cursor: pointer;
+  }
 
-      .body {
-        font-size: 18px;
-      }
+  button:hover:not(:disabled) { border-color: var(--accent); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
 
-      .small {
-        font-size: 16px;
-        fill: #526875;
-      }
+  :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+  }
 
-      .number {
-        font-size: 19px;
-        font-weight: 700;
-        text-anchor: middle;
-      }
+  .skip {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    padding: .6rem 1rem;
+    background: var(--surface);
+    color: var(--accent);
+  }
+  .skip:focus { top: .5rem; }
 
-      .card {
-        stroke-width: 1.5;
-      }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
 
-      .input {
-        fill: #F1F5F8;
-        stroke: #C9D6DF;
-      }
+  .header-inner {
+    max-width: 1120px;
+    margin: auto;
+    padding: .75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+  }
 
-      .analysis {
-        fill: #EAF6FA;
-        stroke: #B9DCE6;
-      }
+  .menu-wrap { position: relative; }
 
-      .knowledge {
-        fill: #FAEDF3;
-        stroke: #E6C9D7;
-      }
+  #menu-toggle {
+    min-width: 44px;
+    font-size: 1.2rem;
+  }
 
-      .artifact {
-        fill: #F0F7E9;
-        stroke: #CDDFB9;
-      }
+  .brand {
+    flex: 1;
+    min-width: 0;
+    font-weight: 750;
+    line-height: 1.35;
+  }
 
-      .product {
-        fill: #FFF3E5;
-        stroke: #E9D3B5;
-      }
+  .brand small {
+    display: block;
+    font-size: .75rem;
+    color: var(--muted);
+    font-weight: 400;
+  }
 
-      .flow {
-        fill: none;
-        stroke: #62798A;
-        stroke-width: 2;
-        marker-end: url(#arrow);
-      }
+  .controls { display: flex; gap: .45rem; }
 
-      .optional {
-        stroke-dasharray: 6 6;
-      }
+  #module-menu {
+    position: absolute;
+    top: calc(100% + .75rem);
+    left: 0;
+    width: min(330px, calc(100vw - 2rem));
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: .6rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
 
-      .feedback {
-        fill: none;
-        stroke: #83927A;
-        stroke-width: 2;
-        stroke-dasharray: 6 6;
-        marker-end: url(#feedbackArrow);
-      }
-    </style>
-  </defs>
+  #module-menu button {
+    display: block;
+    width: 100%;
+    margin: .2rem 0;
+    border-color: transparent;
+    text-align: left;
+  }
 
-  <!-- Canvas -->
-  <rect width="840" height="1880" fill="#FCFDFE"></rect>
+  #module-menu button[aria-current="page"] {
+    background: var(--blue);
+    border-color: var(--border);
+    font-weight: 700;
+  }
 
-  <!-- Document header -->
-  <text x="420" y="52" text-anchor="middle" class="title">
-    Business News Analysis
-  </text>
-  <text x="420" y="82" text-anchor="middle" class="subtitle">
-    EMI · Session: 2026-11-25
-  </text>
-  <text x="420" y="111" text-anchor="middle" class="subtitle">
-    Systematic · Structured · Process-oriented
-  </text>
+  main {
+    max-width: 940px;
+    margin: auto;
+    padding: 2rem 1rem 2.5rem;
+  }
 
-  <!-- Section 1 -->
-  <text x="80" y="150" class="section">
-    01 / KNOWLEDGE PROCESSING
-  </text>
+  .eyebrow {
+    color: var(--accent);
+    font-size: .8rem;
+    font-weight: 750;
+    letter-spacing: .08em;
+  }
 
-  <!-- Input -->
-  <rect x="80" y="169" width="680" height="118" rx="16" class="card input"></rect>
-  <circle cx="117" cy="202" r="18" fill="#DCE7EE"></circle>
-  <text x="117" y="209" class="number">1</text>
-  <text x="150" y="209" class="heading">Collect and recognize</text>
-  <text x="108" y="243" class="body">
-    Handwritten notes · Audio · Video · Images
-  </text>
-  <text x="108" y="270" class="small">
-    Preserve colors, highlighted ranges, arrows, and grouping.
-  </text>
+  h1 {
+    margin: .4rem 0 .7rem;
+    font-size: clamp(1.8rem, 5vw, 2.65rem);
+    line-height: 1.25;
+  }
 
-  <path d="M420 287 V317" class="flow"></path>
+  h2 {
+    margin: 0 0 .4rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
 
-  <!-- Separate -->
-  <rect x="80" y="323" width="680" height="108" rx="16" class="card analysis"></rect>
-  <circle cx="117" cy="355" r="18" fill="#CDEAF2"></circle>
-  <text x="117" y="362" class="number">2</text>
-  <text x="150" y="362" class="heading">Separate</text>
-  <text x="108" y="395" class="body">
-    Define the problem, demand, questions, and components.
-  </text>
-  <text x="108" y="418" class="small">
-    Output: a clear scope and a set of analytical questions.
-  </text>
+  p { margin: .4rem 0; }
 
-  <path d="M420 431 V461" class="flow"></path>
+  .intro {
+    max-width: 70ch;
+    font-size: 1.06rem;
+    color: var(--muted);
+  }
 
-  <!-- Investigate -->
-  <rect x="80" y="467" width="680" height="118" rx="16" class="card analysis"></rect>
-  <circle cx="117" cy="499" r="18" fill="#CDEAF2"></circle>
-  <text x="117" y="506" class="number">3</text>
-  <text x="150" y="506" class="heading">Investigate</text>
-  <text x="108" y="540" class="body">
-    Examine evidence, examples, and potential relationships.
-  </text>
-  <text x="108" y="567" class="small">
-    Discuss ambiguities; distinguish facts from interpretations.
-  </text>
+  .principles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: 1.2rem 0 1.6rem;
+  }
 
-  <path d="M420 585 V615" class="flow"></path>
+  .pill {
+    padding: .25rem .75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: .85rem;
+  }
 
-  <!-- Recombine -->
-  <rect x="80" y="621" width="680" height="108" rx="16" class="card analysis"></rect>
-  <circle cx="117" cy="653" r="18" fill="#CDEAF2"></circle>
-  <text x="117" y="660" class="number">4</text>
-  <text x="150" y="660" class="heading">Recombine</text>
-  <text x="108" y="693" class="body">
-    Integrate components into a coherent representation.
-  </text>
-  <text x="108" y="716" class="small">
-    Make categories, relationships, and process order explicit.
-  </text>
+  .workflow {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+  }
 
-  <path d="M420 729 V759" class="flow"></path>
+  .workflow li { position: relative; }
 
-  <!-- Insights -->
-  <rect x="80" y="765" width="680" height="108" rx="16" class="card knowledge"></rect>
-  <circle cx="117" cy="797" r="18" fill="#F0D8E4"></circle>
-  <text x="117" y="804" class="number">5</text>
-  <text x="150" y="804" class="heading">Generate insights</text>
-  <text x="108" y="837" class="body">
-    Explain connections, implications, and possible actions.
-  </text>
-  <text x="108" y="860" class="small">
-    Check effectiveness: does the analysis address its purpose?
-  </text>
+  .workflow li:not(:last-child)::after {
+    content: "↓";
+    position: absolute;
+    left: 1.7rem;
+    bottom: -1.35rem;
+    color: var(--muted);
+    line-height: 1;
+  }
 
-  <path d="M420 873 V903" class="flow"></path>
+  .card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
 
-  <!-- Markdown review -->
-  <rect x="80" y="909" width="680" height="118" rx="16" class="card knowledge"></rect>
-  <circle cx="117" cy="941" r="18" fill="#F0D8E4"></circle>
-  <text x="117" y="948" class="number">6</text>
-  <text x="150" y="948" class="heading">Document and review — KB.md</text>
-  <text x="108" y="982" class="body">
-    Consolidate the structured summary and open questions.
-  </text>
-  <text x="108" y="1009" class="small">
-    Review → clarify → revise → approve for visualization.
-  </text>
+  .blue { background: var(--blue); }
+  .pink { background: var(--pink); }
+  .green { background: var(--green); }
+  .orange { background: var(--orange); }
 
-  <path d="M420 1027 V1057" class="flow"></path>
+  .number {
+    flex: 0 0 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    font-weight: 750;
+  }
 
-  <!-- SVG output -->
-  <rect x="80" y="1063" width="680" height="108" rx="16" class="card artifact"></rect>
-  <circle cx="117" cy="1095" r="18" fill="#DDECCD"></circle>
-  <text x="117" y="1102" class="number">7</text>
-  <text x="150" y="1102" class="heading">Visualize — SVG</text>
-  <text x="108" y="1135" class="body">
-    Show the process, relationships, and outputs clearly.
-  </text>
-  <text x="108" y="1158" class="small">
-    Portrait layout · Direct wording · Light-colored styling
-  </text>
+  .card-content { min-width: 0; }
+  .output { margin-top: .7rem; color: var(--muted); font-size: .9rem; }
 
-  <!-- Optional transition -->
-  <path d="M420 1171 V1224" class="flow optional"></path>
-  <rect x="440" y="1182" width="208" height="27" rx="8" fill="#FCFDFE"></rect>
-  <text x="450" y="1201" class="small">
-    Optional product extension
-  </text>
+  .notice {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    color: var(--muted);
+  }
 
-  <!-- Section 2 background -->
-  <rect x="60" y="1232" width="720" height="552" rx="20" fill="#FFFBF5" stroke="#EFE2D0"></rect>
+  .page-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
 
-  <text x="80" y="1264" class="section">
-    02 / PRODUCT DEVELOPMENT
-  </text>
+  #previous { justify-self: start; }
+  #next { justify-self: end; }
+  #position { color: var(--muted); font-size: .9rem; text-align: center; }
+  #top-button { display: block; margin: 1rem auto 0; }
 
-  <!-- Requirements -->
-  <rect x="80" y="1283" width="680" height="118" rx="16" class="card product"></rect>
-  <circle cx="117" cy="1315" r="18" fill="#F7E3C8"></circle>
-  <text x="117" y="1322" class="number">8</text>
-  <text x="150" y="1322" class="heading">Define product requirements</text>
-  <text x="108" y="1356" class="body">
-    Connect demand, supply, functions, and verification.
-  </text>
-  <text x="108" y="1383" class="small">
-    Artifact: PRD.md · Define the BNA Agent's responsibilities.
-  </text>
+  footer {
+    padding: 1.4rem 1rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+  }
 
-  <path d="M420 1401 V1431" class="flow"></path>
+  footer p { margin: .25rem 0; }
 
-  <!-- MVP -->
-  <rect x="80" y="1437" width="680" height="108" rx="16" class="card product"></rect>
-  <circle cx="117" cy="1469" r="18" fill="#F7E3C8"></circle>
-  <text x="117" y="1476" class="number">9</text>
-  <text x="150" y="1476" class="heading">Build and verify an MVP</text>
-  <text x="108" y="1509" class="body">
-    Create a Minimum Viable Product for the defined need.
-  </text>
-  <text x="108" y="1532" class="small">
-    Potential form: website, application, or SaaS.
-  </text>
+  @media (max-width: 520px) {
+    .header-inner { gap: .45rem; }
+    .brand { font-size: .9rem; }
+    .brand small { font-size: .67rem; }
+    .controls button { padding: .45rem .55rem; font-size: .85rem; }
+    main { padding-top: 1.4rem; }
+    .card { padding: 1rem; gap: .7rem; }
+    .page-nav { gap: .4rem; }
+    .page-nav button { padding: .55rem .6rem; font-size: .85rem; }
+    #position { font-size: .8rem; }
+  }
 
-  <path d="M420 1545 V1575" class="flow"></path>
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 
-  <!-- Deployment and market -->
-  <rect x="80" y="1581" width="680" height="150" rx="16" class="card product"></rect>
-  <circle cx="117" cy="1613" r="18" fill="#F7E3C8"></circle>
-  <text x="117" y="1620" class="number">10</text>
-  <text x="150" y="1620" class="heading">Deploy and assess market value</text>
-  <text x="108" y="1654" class="body">
-    Publish a web application and share its deployment URL.
-  </text>
-  <text x="108" y="1682" class="body">
-    Producers ↔ Market ↔ Consumers
-  </text>
-  <text x="108" y="1710" class="small">
-    Assess target audience, value, willingness to pay, and transactions.
-  </text>
+  @media print {
+    header, .page-nav, #top-button, .skip { display: none; }
+    body { background: white; color: black; }
+    main { max-width: none; }
+    .card { break-inside: avoid; }
+  }
+</style>
+</head>
 
-  <!-- Market feedback loop -->
-  <path d="M760 1684 H802 V1337 H766" class="feedback"></path>
-  <text x="791" y="1530" transform="rotate(-90 791 1530)" text-anchor="middle" class="small">
-    Market feedback → refine requirements
-  </text>
+<body>
+<a id="skip" class="skip" href="#main">Skip to content</a>
 
-  <!-- Supporting AI roles -->
-  <rect x="80" y="1744" width="680" height="27" rx="8" fill="#F4F6EF"></rect>
-  <text x="420" y="1763" text-anchor="middle" class="small">
-    AI support: Chatbot · Task agent · Coding agent
-  </text>
+<header>
+  <div class="header-inner">
+    <div id="menu-wrap" class="menu-wrap">
+      <button id="menu-toggle" type="button"
+              aria-label="Open module menu"
+              aria-expanded="false"
+              aria-controls="module-menu">☰</button>
+      <nav id="module-menu" aria-label="Modules" hidden></nav>
+    </div>
 
-  <!-- Footer / legend -->
-  <line x1="80" y1="1810" x2="124" y2="1810" stroke="#62798A" stroke-width="2"></line>
-  <text x="137" y="1816" class="small">Process sequence</text>
+    <div class="brand">
+      BNA × EMI
+      <small id="subtitle">Knowledge → Insights → Product</small>
+    </div>
 
-  <line x1="340" y1="1810" x2="384" y2="1810" stroke="#62798A" stroke-width="2" stroke-dasharray="6 6"></line>
-  <text x="397" y="1816" class="small">
-    Optional extension / feedback
-  </text>
+    <div class="controls">
+      <button id="language-button" type="button">繁中</button>
+      <button id="theme-button" type="button">Dark</button>
+    </div>
+  </div>
+</header>
 
-  <text x="80" y="1848" class="small">
-    Diagram palette is illustrative; the source-note color legend is pending.
-  </text>
-  <text x="80" y="1871" class="small">
-    TP and supporting-file dependencies remain open for confirmation.
-  </text>
-</svg>
-</body></html>
+<main id="main" tabindex="-1">
+  <article aria-labelledby="page-title">
+    <div id="eyebrow" class="eyebrow"></div>
+    <h1 id="page-title" tabindex="-1"></h1>
+    <p id="intro" class="intro"></p>
+    <div id="principles" class="principles"></div>
+    <ol id="workflow" class="workflow"></ol>
+    <aside id="notice" class="notice"></aside>
+  </article>
+
+  <nav id="page-nav" class="page-nav" aria-label="Page navigation">
+    <button id="previous" type="button">← Previous page</button>
+    <span id="position" role="status" aria-live="polite"></span>
+    <button id="next" type="button">Next page →</button>
+  </nav>
+
+  <button id="top-button" type="button">↑ Return to the top</button>
+</main>
+
+<footer>
+  <p>Architect: Prof. Shihmin Lo</p>
+  <p id="version"></p>
+  <p id="copyright"></p>
+</footer>
+
+<script>
+"use strict";
+
+// Confirm the copyright holder before public release.
+const CONFIG = {
+  version: "0.1.0",
+  year: 2026,
+  copyrightHolder: "Prof. Shihmin Lo"
+};
+
+const bilingual = (en, zh) => ({ en, zh });
+const step = (title, body, output, color = "blue") =>
+  ({ title, body, output, color });
+
+const modules = [
+  {
+    id: "overview",
+    title: bilingual("Overview", "整體架構"),
+    intro: bilingual(
+      "From classroom materials to reviewed knowledge, insights, and a potential digital product.",
+      "從課堂素材出發，形成經檢核的知識、洞察，以及具發展潛力的數位產品。"
+    ),
+    steps: [
+      step(
+        bilingual("Collect materials", "蒐集素材"),
+        bilingual(
+          "Gather handwritten notes, audio, video, and images. Preserve visual organization.",
+          "蒐集手寫筆記、錄音、影片與圖片，保留原始視覺組織。"
+        ),
+        bilingual("Source materials and context.", "原始素材與背景脈絡。")
+      ),
+      step(
+        bilingual("Analyze and integrate", "分析與整合"),
+        bilingual(
+          "Separate the subject, investigate with evidence, and recombine relationships.",
+          "拆解主題、依據證據探究，再重組各部分的關係。"
+        ),
+        bilingual("Evidence-supported insights.", "有證據支持的洞察。")
+      ),
+      step(
+        bilingual("Document and visualize", "記錄與視覺化"),
+        bilingual(
+          "Review KB.md, clarify uncertainties, and create a process diagram.",
+          "檢核 KB.md、釐清不確定事項，並製作流程圖。"
+        ),
+        bilingual("Reviewed Markdown and SVG.", "經檢核的 Markdown 與 SVG。"),
+        "pink"
+      ),
+      step(
+        bilingual("Extend into a product — optional", "延伸為產品——選用"),
+        bilingual(
+          "Define requirements, build an MVP, deploy, and assess market value.",
+          "定義需求、建立 MVP、部署，並評估市場價值。"
+        ),
+        bilingual("A potential application or service.", "具發展潛力的應用程式或服務。"),
+        "orange"
+      )
+    ],
+    note: bilingual(
+      "BNA = Business News Analysis. EMI = English as a Medium of Instruction. Session: 2026-11-25. Product development is an optional extension.",
+      "BNA＝商業新聞分析；EMI＝英語授課。課堂日期：2026-11-25。產品開發為選用的延伸方向。"
+    )
+  },
+  {
+    id: "analysis",
+    title: bilingual("Analytical Thinking", "分析思考"),
+    intro: bilingual(
+      "Progress from clearly defined questions to an integrated explanation.",
+      "從明確的問題出發，逐步形成整合性的解釋。"
+    ),
+    steps: [
+      step(
+        bilingual("Separate", "拆解"),
+        bilingual(
+          "Identify the problem, demand, questions, stakeholders, and components.",
+          "辨識問題、需求、待答問題、利害關係人與組成要素。"
+        ),
+        bilingual("A defined scope and question set.", "明確範圍與問題集合。")
+      ),
+      step(
+        bilingual("Investigate", "探究"),
+        bilingual(
+          "Examine evidence and examples. Distinguish facts from interpretations.",
+          "檢視證據與例子，區分事實與詮釋。"
+        ),
+        bilingual("Evidence-supported findings.", "有證據支持的發現。")
+      ),
+      step(
+        bilingual("Recombine", "重組"),
+        bilingual(
+          "Integrate categories, relationships, and stages into a coherent representation.",
+          "將類別、關係與階段整合為一致的表徵。"
+        ),
+        bilingual("A structured representation or mind map.", "結構化表徵或心智圖。")
+      ),
+      step(
+        bilingual("Generate insights", "產生洞察"),
+        bilingual(
+          "Explain implications, answer the original questions, and identify possible actions.",
+          "說明意涵、回應原始問題，並辨識可能的行動。"
+        ),
+        bilingual("Insights connected to the purpose.", "與原始目的相連的洞察。"),
+        "pink"
+      )
+    ],
+    note: bilingual(
+      "Effectiveness concerns reaching the goal. Efficiency concerns output relative to input. The handwritten mark beside “efficient” remains unresolved.",
+      "效果關注是否達成目標；效率關注投入與產出的關係。原筆記中「efficient」旁的符號仍待釐清。"
+    )
+  },
+  {
+    id: "knowledge",
+    title: bilingual("Knowledge Processing", "知識處理"),
+    intro: bilingual(
+      "Combine AI assistance with human review to preserve meaning, not merely transcribe text.",
+      "結合 AI 協助與人工檢核，保留原意，而非僅轉錄文字。"
+    ),
+    steps: [
+      step(
+        bilingual("Recognize and organize", "辨識與整理"),
+        bilingual(
+          "Extract text and identify topics, colors, highlighted ranges, arrows, and groups.",
+          "擷取文字，辨識主題、色彩、標示範圍、箭頭與分組。"
+        ),
+        bilingual("Organized source content.", "整理後的來源內容。")
+      ),
+      step(
+        bilingual("Analyze and clarify", "分析與釐清"),
+        bilingual(
+          "Investigate relationships and discuss unclear handwriting or uncertain meanings.",
+          "探究關係，討論難辨字跡及不確定的含義。"
+        ),
+        bilingual("Findings with uncertainties marked.", "已標記不確定事項的發現。")
+      ),
+      step(
+        bilingual("Write KB.md", "撰寫 KB.md"),
+        bilingual(
+          "Consolidate concepts, processes, outputs, evidence, and open questions in Markdown.",
+          "以 Markdown 彙整概念、流程、產出、證據與待確認問題。"
+        ),
+        bilingual("A structured knowledge base.", "結構化知識庫。"),
+        "pink"
+      ),
+      step(
+        bilingual("Review and approve", "檢核與確認"),
+        bilingual(
+          "Clarify ambiguities and revise before producing further deliverables.",
+          "釐清歧義並修訂，再製作後續成果。"
+        ),
+        bilingual("Reviewed knowledge ready for visualization.", "可進行視覺化的已檢核知識。"),
+        "green"
+      )
+    ],
+    note: bilingual(
+      "Proposed AI roles: chatbot for discussion, task agent for defined processing, and coding agent for implementation. Team and session responsibilities remain to be specified.",
+      "AI 角色暫定：聊天機器人協助討論、任務代理執行指定處理、程式代理協助實作。團隊與課堂協作分工仍待具體定義。"
+    )
+  },
+  {
+    id: "outputs",
+    title: bilingual("Artifacts and Presentation", "成果與呈現"),
+    intro: bilingual(
+      "Select deliverables according to purpose; not every workflow needs every output.",
+      "依目的選擇成果形式，不必在每次流程中製作所有類型。"
+    ),
+    steps: [
+      step(
+        bilingual("Knowledge document", "知識文件"),
+        bilingual(
+          "Use KB.md as the consolidated reference and retain open questions.",
+          "以 KB.md 作為彙整參考，保留待確認問題。"
+        ),
+        bilingual("A reviewable Markdown document.", "可檢核的 Markdown 文件。"),
+        "pink"
+      ),
+      step(
+        bilingual("SVG visualization", "SVG 視覺化"),
+        bilingual(
+          "Show stages, relationships, optional extensions, and feedback in portrait format.",
+          "以直式版面呈現階段、關係、選用延伸與回饋。"
+        ),
+        bilingual("A scalable process diagram.", "可縮放的流程圖。"),
+        "green"
+      ),
+      step(
+        bilingual("Responsive bilingual SPA", "雙語響應式 SPA"),
+        bilingual(
+          "Present modules with language switching, light/dark themes, and clear navigation.",
+          "以模組呈現內容，提供語言切換、淺色／深色主題與清楚導覽。"
+        ),
+        bilingual("An interactive single-page application.", "互動式單頁應用程式。"),
+        "green"
+      ),
+      step(
+        bilingual("Publish", "發布"),
+        bilingual(
+          "Review the application, host it, and share its deployment URL.",
+          "檢核應用程式後完成架設，分享部署網址。"
+        ),
+        bilingual("A shareable web link.", "可分享的網頁連結。"),
+        "orange"
+      )
+    ],
+    note: bilingual(
+      "Style: simple, clear, and lightly colored. Prioritize portrait mobile reading while supporting wider screens. The source color legend and dependencies among KB.md, handoff.md, and PRD.md remain open.",
+      "風格：簡單、清楚、採淺色系。優先支援手機直式閱讀，同時適應寬螢幕。原筆記色彩圖例及 KB.md、handoff.md、PRD.md 的相依關係仍待釐清。"
+    )
+  },
+  {
+    id: "product",
+    title: bilingual("Product Development", "產品開發"),
+    intro: bilingual(
+      "Translate knowledge processing into a product and refine it through market feedback.",
+      "將知識處理轉化為產品，並透過市場回饋持續修正。"
+    ),
+    steps: [
+      step(
+        bilingual("Define requirements", "定義需求"),
+        bilingual(
+          "Connect demand, supply, functions, and verification. Specify the BNA Agent's role.",
+          "連結需求、供給、功能與驗證，明確定義 BNA Agent 的角色。"
+        ),
+        bilingual("PRD.md — Product Requirements Document.", "PRD.md——產品需求文件。"),
+        "orange"
+      ),
+      step(
+        bilingual("Build and verify an MVP", "建立並驗證 MVP"),
+        bilingual(
+          "Develop a Minimum Viable Product that addresses the defined need.",
+          "開發能回應已定義需求的最小可行產品。"
+        ),
+        bilingual("An MVP checked against requirements.", "依需求檢驗的 MVP。"),
+        "orange"
+      ),
+      step(
+        bilingual("Deploy", "部署"),
+        bilingual(
+          "Choose a website, application, or SaaS model and suitable front-end/back-end components.",
+          "選擇網站、應用程式或 SaaS 模式，規劃適當的前端與後端。"
+        ),
+        bilingual("A deployed product and URL.", "已部署產品與網址。"),
+        "orange"
+      ),
+      step(
+        bilingual("Assess value and iterate", "評估價值並迭代"),
+        bilingual(
+          "Assess audience, willingness to pay, and market transactions. Feed results back into requirements.",
+          "評估受眾、願付價格與市場交易，將結果回饋至需求定義。"
+        ),
+        bilingual("Market feedback and revised requirements.", "市場回饋與修訂需求。"),
+        "green"
+      )
+    ],
+    note: bilingual(
+      "Working expansions: TA = target audience; WTP = willingness to pay; SaaS = Software as a Service. TP is a confirmed label; its full meaning and role remain open.",
+      "暫定縮寫：TA＝目標受眾；WTP＝願付價格；SaaS＝軟體即服務。TP 標籤已確認，但完整名稱與角色仍待釐清。"
+    )
+  },
+  {
+    id: "review",
+    title: bilingual("Review and Open Questions", "檢核與待確認事項"),
+    intro: bilingual(
+      "Check quality and preserve unresolved details without inventing answers.",
+      "檢查品質，保留未釐清細節，避免自行補入未確認的答案。"
+    ),
+    steps: [
+      step(
+        bilingual("Check purpose and evidence", "檢查目的與證據"),
+        bilingual(
+          "Do findings answer the original questions? Are factual claims supported?",
+          "分析結果是否回應原始問題？事實性主張是否有支持依據？"
+        ),
+        bilingual("An effectiveness and evidence check.", "效果與證據檢核。"),
+        "pink"
+      ),
+      step(
+        bilingual("Check structure and usability", "檢查結構與可用性"),
+        bilingual(
+          "Check stage order and relationships. Test both languages, themes, and screen sizes.",
+          "檢查階段順序與關係，測試兩種語言、主題及不同螢幕尺寸。"
+        ),
+        bilingual("A clear and usable presentation.", "清楚且易用的呈現方式。"),
+        "pink"
+      ),
+      step(
+        bilingual("Resolve source uncertainties", "釐清來源不確定事項"),
+        bilingual(
+          "Confirm TP, color meanings, the tool name resembling “Documind,” file dependencies, team roles, and cross marks.",
+          "確認 TP、色彩意義、疑似「Documind」的工具名稱、文件相依關係、團隊角色與叉號。"
+        ),
+        bilingual("Updated knowledge with fewer ambiguities.", "歧義更少的更新知識。")
+      ),
+      step(
+        bilingual("Confirm release metadata", "確認發布資訊"),
+        bilingual(
+          "Confirm copyright ownership, version convention, and deployment location.",
+          "確認著作權歸屬、版本規則及部署位置。"
+        ),
+        bilingual("A reviewed release.", "完成檢核的發布版本。"),
+        "green"
+      )
+    ],
+    note: bilingual(
+      "This application saves language and theme preferences locally. It does not upload notes, include analytics, or use external libraries. The host's own logging policies are separate.",
+      "本應用程式在本機儲存語言與主題偏好，不上傳筆記、不含分析追蹤，也不使用外部函式庫。網站主機自身的紀錄政策另計。"
+    )
+  }
+];
+
+const UI = {
+  en: {
+    subtitle: "Knowledge → Insights → Product",
+    principles: ["Systematic", "Structured", "Process-oriented"],
+    module: "MODULE",
+    output: "Output: ",
+    previous: "← Previous page",
+    next: "Next page →",
+    top: "↑ Return to the top",
+    skip: "Skip to content",
+    open: "Open module menu",
+    close: "Close module menu",
+    modules: "Modules",
+    navigation: "Page navigation",
+    language: "Switch to Traditional Chinese",
+    dark: "Dark",
+    light: "Light",
+    darkLabel: "Switch to dark mode",
+    lightLabel: "Switch to light mode",
+    version: "Version",
+    rights: "All rights reserved."
+  },
+  zh: {
+    subtitle: "知識 → 洞察 → 產品",
+    principles: ["系統化", "結構化", "流程導向"],
+    module: "模組",
+    output: "產出：",
+    previous: "← 上一頁",
+    next: "下一頁 →",
+    top: "↑ 回到頂端",
+    skip: "跳至主要內容",
+    open: "開啟模組選單",
+    close: "收合模組選單",
+    modules: "模組",
+    navigation: "頁面導覽",
+    language: "Switch to English",
+    dark: "深色",
+    light: "淺色",
+    darkLabel: "切換為深色模式",
+    lightLabel: "切換為淺色模式",
+    version: "版本",
+    rights: "保留所有權利。"
+  }
+};
+
+const $ = id => document.getElementById(id);
+
+function readPreference(key) {
+  try { return localStorage.getItem(key); }
+  catch { return null; }
+}
+
+function savePreference(key, value) {
+  try { localStorage.setItem(key, value); }
+  catch { /* Continue with session-only preferences. */ }
+}
+
+const storedLanguage = readPreference("bna-language");
+let language = ["en", "zh"].includes(storedLanguage)
+  ? storedLanguage : "en";
+
+const systemTheme = matchMedia("(prefers-color-scheme: dark)");
+const storedTheme = readPreference("bna-theme");
+let followsSystem = !["light", "dark"].includes(storedTheme);
+let theme = followsSystem
+  ? (systemTheme.matches ? "dark" : "light")
+  : storedTheme;
+
+let currentIndex = 0;
+const localize = value => value[language];
+
+function textElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  element.textContent = text;
+  return element;
+}
+
+function setMenu(open, restoreFocus = false) {
+  $("module-menu").hidden = !open;
+  $("menu-toggle").setAttribute("aria-expanded", String(open));
+  $("menu-toggle").setAttribute(
+    "aria-label", open ? UI[language].close : UI[language].open
+  );
+  if (restoreFocus) $("menu-toggle").focus();
+}
+
+function renderTheme() {
+  document.documentElement.dataset.theme = theme;
+  const showDark = theme === "light";
+  $("theme-button").textContent =
+    showDark ? UI[language].dark : UI[language].light;
+  $("theme-button").setAttribute(
+    "aria-label",
+    showDark ? UI[language].darkLabel : UI[language].lightLabel
+  );
+}
+
+function renderMenu() {
+  const menu = $("module-menu");
+  menu.replaceChildren();
+  menu.setAttribute("aria-label", UI[language].modules);
+
+  modules.forEach((module, index) => {
+    const button = textElement(
+      "button", "", `${index + 1}. ${localize(module.title)}`
+    );
+    button.type = "button";
+    if (index === currentIndex) {
+      button.setAttribute("aria-current", "page");
+    }
+    button.addEventListener("click", () => navigate(index));
+    menu.append(button);
+  });
+}
+
+function render() {
+  const module = modules[currentIndex];
+  const ui = UI[language];
+
+  document.documentElement.lang = language === "zh" ? "zh-Hant-TW" : "en";
+  document.title = `${localize(module.title)} | BNA × EMI`;
+
+  $("subtitle").textContent = ui.subtitle;
+  $("skip").textContent = ui.skip;
+  $("language-button").textContent = language === "en" ? "繁中" : "EN";
+  $("language-button").setAttribute("aria-label", ui.language);
+
+  $("eyebrow").textContent =
+    `${ui.module} ${String(currentIndex + 1).padStart(2, "0")} / ` +
+    String(modules.length).padStart(2, "0");
+
+  $("page-title").textContent = localize(module.title);
+  $("intro").textContent = localize(module.intro);
+
+  $("principles").replaceChildren(
+    ...ui.principles.map(text => textElement("span", "pill", text))
+  );
+
+  $("workflow").replaceChildren();
+
+  module.steps.forEach((item, index) => {
+    const li = document.createElement("li");
+    const card = document.createElement("section");
+    card.className = `card ${item.color}`;
+
+    const number = textElement("span", "number", String(index + 1));
+    number.setAttribute("aria-hidden", "true");
+
+    const content = document.createElement("div");
+    content.className = "card-content";
+    content.append(
+      textElement("h2", "", localize(item.title)),
+      textElement("p", "", localize(item.body)),
+      textElement("p", "output", ui.output + localize(item.output))
+    );
+
+    card.append(number, content);
+    li.append(card);
+    $("workflow").append(li);
+  });
+
+  $("notice").textContent = localize(module.note);
+  $("previous").textContent = ui.previous;
+  $("next").textContent = ui.next;
+  $("previous").disabled = currentIndex === 0;
+  $("next").disabled = currentIndex === modules.length - 1;
+  $("position").textContent = `${currentIndex + 1} / ${modules.length}`;
+  $("page-nav").setAttribute("aria-label", ui.navigation);
+  $("top-button").textContent = ui.top;
+
+  $("version").textContent = `${ui.version}: v${CONFIG.version}`;
+  $("copyright").textContent =
+    `© ${CONFIG.year} ${CONFIG.copyrightHolder}. ${ui.rights}`;
+
+  renderMenu();
+  renderTheme();
+  setMenu(false);
+}
+
+function returnToTop() {
+  $("page-title").focus({ preventScroll: true });
+  window.scrollTo({
+    top: 0,
+    behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "auto" : "smooth"
+  });
+}
+
+function navigate(index) {
+  if (index < 0 || index >= modules.length) return;
+  setMenu(false);
+
+  const hash = `#${modules[index].id}`;
+  if (location.hash !== hash) {
+    location.hash = hash;
+  } else {
+    currentIndex = index;
+    render();
+    returnToTop();
+  }
+}
+
+function loadRoute(moveToTop = false) {
+  const route = location.hash.slice(1);
+  const index = modules.findIndex(module => module.id === route);
+  currentIndex = index >= 0 ? index : 0;
+  render();
+  if (moveToTop) returnToTop();
+}
+
+$("menu-toggle").addEventListener("click", () => {
+  const opening = $("module-menu").hidden;
+  setMenu(opening);
+  if (opening) {
+    $("module-menu").querySelector('[aria-current="page"]')?.focus();
+  }
+});
+
+document.addEventListener("click", event => {
+  if (!$("menu-wrap").contains(event.target)) setMenu(false);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && !$("module-menu").hidden) {
+    setMenu(false, true);
+  }
+});
+
+$("menu-wrap").addEventListener("focusout", event => {
+  if (!$("menu-wrap").contains(event.relatedTarget)) setMenu(false);
+});
+
+$("language-button").addEventListener("click", () => {
+  language = language === "en" ? "zh" : "en";
+  savePreference("bna-language", language);
+  render();
+});
+
+$("theme-button").addEventListener("click", () => {
+  theme = theme === "light" ? "dark" : "light";
+  followsSystem = false;
+  savePreference("bna-theme", theme);
+  renderTheme();
+});
+
+function onSystemThemeChange(event) {
+  if (followsSystem) {
+    theme = event.matches ? "dark" : "light";
+    renderTheme();
+  }
+}
+
+if (systemTheme.addEventListener) {
+  systemTheme.addEventListener("change", onSystemThemeChange);
+} else {
+  systemTheme.addListener(onSystemThemeChange);
+}
+
+$("previous").addEventListener("click", () => navigate(currentIndex - 1));
+$("next").addEventListener("click", () => navigate(currentIndex + 1));
+$("top-button").addEventListener("click", returnToTop);
+window.addEventListener("hashchange", () => loadRoute(true));
+
+loadRoute();
+</script>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
